@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net48;net6.0-windows</TargetFrameworks>
+
+		<OutputType>Library</OutputType>
+		<LangVersion>latest</LangVersion>
+
+		<Deterministic>false</Deterministic>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+		<StartupObject />
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="ZL.Forms">
+			<HintPath>libs\ZL.Forms.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Update="Framework\SopStepHost.cs">
+			<SubType>UserControl</SubType>
+		</Compile>
+		<Compile Update="Units\SimpleImageUnit.cs">
+			<SubType>Component</SubType>
+		</Compile>
+	</ItemGroup>
+</Project>
